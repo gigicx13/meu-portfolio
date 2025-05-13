@@ -1,0 +1,77 @@
+:root {
+    --cor-texto-principal: #FFFFFF;
+    --cor-secundario: #2D93D3;
+    --gradiente-secundario: linear-gradient(90deg, #EE2E90 0%, #2D93D3 100%);
+    --gradiente-principal: linear-gradient(90deg, #EE2E90 0%, #9747FF 85.1%);
+    --font-principal: 'Lexend';
+    --font-titulo: 'Anonymous Pro';
+    --background-color: #111723;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .paginas {
+    color: var(--cor-texto-principal);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+    font-family: Lexend;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 5.4375rem;
+    letter-spacing: 0.045rem;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Evita espaçamentos inesperados */
+    margin: 0; /* Corrige possíveis espaçamentos extras */
+  }
+  
+  .paginas a {
+    color: var(--cor-texto-principal); /* Mantém a cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+  }
+  
+.header{
+  text-decoration: none;
+}
+.titulo {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Anonymous Pro", monospace;
+  font-size: 7rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 5.0625rem; 
+  letter-spacing: 0.49rem;
+  background: var(--gradiente-principal);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: cover; /* Mantém o gradiente cobrindo toda a área */
+  background-position: 0; /* Fixa o gradiente na posição correta */
+  display: inline-block; /* Mantém o comportamento do fundo restrito ao texto */
+}
+
+body {
+  background-color: var(--background-color); 
+  color: #ffffff; 
+}
+
+.apresentaca{
+  color: var(--cor-texto-principal);
+  text-align: justify;
+  text-shadow: 0px 2px 4.8px rgba(0, 0, 0, 0.25);
+  font-family: Lexend;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 36px; /* 138.462% */
+  letter-spacing: 1.82px;
+  width: 601px;
+}
+
+
