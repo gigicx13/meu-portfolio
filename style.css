@@ -38,14 +38,20 @@
 .header{
   text-decoration: none;
 }
+.conteudo{
+  width: 645px;
+  height: 451px;
+  flex-shrink: 0;
+}
 .titulo {
+  width: 643px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: "Anonymous Pro", monospace;
-  font-size: 7rem;
+  font-size: 112px;
   font-style: normal;
   font-weight: 400;
-  line-height: 5.0625rem; 
-  letter-spacing: 0.49rem;
+  line-height: 81px; 
+  letter-spacing: 7.84px;
   background: var(--gradiente-principal);
   background-clip: text;
   -webkit-background-clip: text;
@@ -73,5 +79,54 @@ body {
   letter-spacing: 1.82px;
   width: 601px;
 }
-
-
+.botoes{
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+}
+.botao-portfolio{
+  display: flex;
+  width: 140px;
+  height: 40px;
+  padding: 15px 36px 14px 37px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-style: normal;
+  font-family: var(--font-principal);
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(#111723) padding-box, /* fundo  */
+              linear-gradient(45deg, #EE2E90, #2D93D3) border-box; 
+  border: 3px solid transparent;
+  cursor: pointer;
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+}
+.botao-github{
+  display: flex;
+  width: 140px;
+  height: 40px;
+  padding: 15px 36px 14px 37px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-style: normal;
+  font-family: var(--font-principal);
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(#111723) padding-box, /* fundo */
+              linear-gradient(45deg, #EE2E90, #2D93D3) border-box; 
+  border: 3px solid transparent;
+  cursor: pointer;
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+}
+.imagem{
+  width: 425px;
+  height: 425px;
+  flex-shrink: 0;
+  padding-left: 74px;
+}
