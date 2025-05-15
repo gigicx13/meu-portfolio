@@ -1,132 +1,119 @@
 :root {
-    --cor-texto-principal: #FFFFFF;
-    --cor-secundario: #2D93D3;
-    --gradiente-secundario: linear-gradient(90deg, #EE2E90 0%, #2D93D3 100%);
-    --gradiente-principal: linear-gradient(90deg, #EE2E90 0%, #9747FF 85.1%);
-    --font-principal: 'Lexend';
-    --font-titulo: 'Anonymous Pro';
-    --background-color: #111723;
-  }
+  --cor-texto-principal: #FFFFFF;
+  --cor-secundario: #2D93D3;
+  --gradiente-secundario: linear-gradient(90deg, #EE2E90 0%, #2D93D3 100%);
+  --gradiente-principal: linear-gradient(90deg, #EE2E90 0%, #9747FF 85.1%);
+  --font-principal: 'Lexend';
+  --font-titulo: 'Anonymous Pro';
+  --background-color: #111723;
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .paginas {
-    color: var(--cor-texto-principal);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 2rem;
-    font-family: Lexend;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 5.4375rem;
-    letter-spacing: 0.045rem;
-    list-style: none; /* Remove os marcadores da lista */
-    padding: 0; /* Evita espaçamentos inesperados */
-    margin: 0; /* Corrige possíveis espaçamentos extras */
-  }
-  
-  .paginas a {
-    color: var(--cor-texto-principal); /* Mantém a cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-  }
-  
-.header{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('/imgs/backgroud-1.png');
+  color: var(--cor-texto-principal);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.paginas {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-family: var(--font-principal);
+  font-size: 24px;
+  font-weight: 500;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 32px;
+}
+
+.paginas a {
+  color: var(--cor-texto-principal);
   text-decoration: none;
 }
-.conteudo{
-  width: 645px;
-  height: 451px;
-  flex-shrink: 0;
+
+.container-flex {
+  display: flex;
+  align-items: center;
+  gap: 41px;
+  width: 1127px;
+  height: 411px;
+  max-width: 100%;
+  padding-left: 120px;
+  padding-top: 179px;
 }
+
 .titulo {
-  width: 643px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Anonymous Pro", monospace;
-  font-size: 112px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 81px; 
-  letter-spacing: 7.84px;
+  font-family: var(--font-titulo);
+  font-size: 105px;
+  font-weight: 300;
+  line-height: 81px;
+  letter-spacing: 12.6px;
   background: var(--gradiente-principal);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  background-size: cover; /* Mantém o gradiente cobrindo toda a área */
-  background-position: 0; /* Fixa o gradiente na posição correta */
-  display: inline-block; /* Mantém o comportamento do fundo restrito ao texto */
+  background-size: 100% auto;
+  background-position: center;
+  display: inline-block;
+  padding-bottom: 41px;
 }
 
-body {
-  background-color: var(--background-color); 
-  color: #ffffff; 
-}
-
-.apresentaca{
+.apresentacao {
   color: var(--cor-texto-principal);
   text-align: justify;
   text-shadow: 0px 2px 4.8px rgba(0, 0, 0, 0.25);
-  font-family: Lexend;
+  font-family: var(--font-principal);
   font-size: 26px;
-  font-style: normal;
   font-weight: 300;
-  line-height: 36px; /* 138.462% */
+  line-height: 36px;
   letter-spacing: 1.82px;
   width: 601px;
+  padding-bottom: 41px;
 }
-.botoes{
-  display: inline-flex;
+
+.botoes {
+  display: flex;
   align-items: center;
   gap: 32px;
 }
-.botao-portfolio{
+
+.botao-linkedin, .botao-github {
   display: flex;
   width: 140px;
   height: 40px;
-  padding: 15px 36px 14px 37px;
   justify-content: center;
   align-items: center;
-  padding: 12px 24px;
   font-size: 16px;
-  font-style: normal;
   font-family: var(--font-principal);
   border: none;
   border-radius: 8px;
-  background: linear-gradient(#111723) padding-box, /* fundo  */
-              linear-gradient(45deg, #EE2E90, #2D93D3) border-box; 
+  background: linear-gradient(#111723) padding-box,
+              linear-gradient(45deg, #EE2E90, #2D93D3) border-box;
   border: 3px solid transparent;
   cursor: pointer;
   color: var(--cor-texto-principal);
   text-decoration: none;
 }
-.botao-github{
+
+.imagem {
   display: flex;
-  width: 140px;
-  height: 40px;
-  padding: 15px 36px 14px 37px;
-  justify-content: center;
   align-items: center;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-style: normal;
-  font-family: var(--font-principal);
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(#111723) padding-box, /* fundo */
-              linear-gradient(45deg, #EE2E90, #2D93D3) border-box; 
-  border: 3px solid transparent;
-  cursor: pointer;
-  color: var(--cor-texto-principal);
-  text-decoration: none;
-}
-.imagem{
-  width: 425px;
-  height: 425px;
-  flex-shrink: 0;
-  padding-left: 74px;
+  width: 361px;
+  height: 361px;
+  padding: 0 34px 0 74px;
 }
