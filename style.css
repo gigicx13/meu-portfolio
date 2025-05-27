@@ -23,20 +23,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 38px;
   height: 100px;
+}
+
+.menu-box {
+  width: 1151px;
+  border: 1px solid #6798DE;
+  border-radius: 22px;
+  box-shadow: 0px 3px 8.7px 0px #6798DE;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 81px;
+}
+
+.logo-nome img {
+  width: 101px;
+  height: auto;
 }
 
 .paginas {
   display: flex;
-  align-items: center;
-  gap: 2rem;
-  font-family: var(--font-principal);
-  font-size: 24px;
-  font-weight: 500;
+  gap: 32px;
   list-style: none;
-  padding: 0;
   margin: 0;
-  padding-top: 32px;
+  padding: 0;
+  font-family: var(--font-principal);
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .paginas a {
@@ -44,10 +64,15 @@ body {
   text-decoration: none;
 }
 
+.icones {
+  display: flex;
+  gap: 32px;
+}
+
 .container-flex {
   display: flex;
   align-items: center;
-  gap: 41px;
+  gap: 32px;
   width: 1127px;
   height: 411px;
   max-width: 100%;
@@ -58,7 +83,7 @@ body {
 .titulo {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: var(--font-titulo);
-  font-size: 105px;
+  font-size: 84px;
   font-weight: 300;
   line-height: 81px;
   letter-spacing: 12.6px;
@@ -78,7 +103,7 @@ body {
   text-align: justify;
   text-shadow: 0px 2px 4.8px rgba(0, 0, 0, 0.25);
   font-family: var(--font-principal);
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 36px;
   letter-spacing: 1.82px;
@@ -101,10 +126,10 @@ body {
   font-size: 16px;
   font-family: var(--font-principal);
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   background: linear-gradient(#111723) padding-box,
               linear-gradient(45deg, #EE2E90, #2D93D3) border-box;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   cursor: pointer;
   color: var(--cor-texto-principal);
   text-decoration: none;
@@ -113,7 +138,8 @@ body {
 .imagem {
   display: flex;
   align-items: center;
-  width: 361px;
-  height: 361px;
+  width: 350px;
+  height: 357.064px;
   padding: 0 34px 0 74px;
+  flex-shrink: 0;
 }
