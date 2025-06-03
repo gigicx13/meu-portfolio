@@ -15,7 +15,7 @@
 }
 
 body {
-  background-image: url('/imgs/backgroud-1.png');
+  background: var(--background-color);
   color: var(--cor-texto-principal);
 }
 
@@ -57,6 +57,11 @@ body {
   font-family: var(--font-principal);
   font-size: 20px;
   font-weight: 500;
+}
+.paginas li a:hover {
+  color: var(--cor-secundario); /* cor padrão do texto (preto) */
+  text-decoration: none; /* sem sublinhado por padrão */
+  transition: color 0.3s ease; /* transição suave para a cor */
 }
 
 .paginas a {
@@ -118,23 +123,66 @@ body {
 }
 
 .botao-linkedin, .botao-github {
+  position: relative;
   display: flex;
-  width: 140px;
-  height: 40px;
   justify-content: center;
   align-items: center;
+  width: 140px;
+  height: 40px;
   font-size: 16px;
   font-family: var(--font-principal);
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(#111723) padding-box,
-              linear-gradient(45deg, #EE2E90, #2D93D3) border-box;
-  border: 2px solid transparent;
-  cursor: pointer;
   color: var(--cor-texto-principal);
   text-decoration: none;
+  cursor: pointer;
+  border-radius: 12px;
+
+  background-color: var(--background-color); /* fundo sólido normal */
+  border: none; /* sem borda real */
+
+  z-index: 0;
+  overflow: hidden;
+  transition: color 0.3s ease;
 }
 
+/* Pseudo para borda com gradiente horizontal */
+.botao-linkedin::before,
+.botao-github::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 12px;
+  padding: 2px; /* largura da borda */
+  background: linear-gradient(90deg, #EE2E90, #2D93D3); /* gradiente horizontal */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude; /* cria efeito borda só na borda */
+  pointer-events: none;
+
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+/* Hover: fundo com blur e gradiente sem alterar borda */
+.botao-linkedin:hover,
+.botao-github:hover {
+  color: var(--cor-texto-principal);
+
+}
+
+.botao-linkedin:hover::after,
+.botao-github:hover::after {
+  content: "";
+  position: absolute;
+  top: 2px; left: 2px; right: 2px; bottom: 2px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(238, 46, 144, 0.4), rgba(45, 147, 211, 0.4)); /* também horizontal no hover */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  pointer-events: none;
+  z-index: -1;
+}
 .imagem {
   display: flex;
   align-items: center;
