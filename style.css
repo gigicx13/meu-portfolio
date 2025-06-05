@@ -59,9 +59,9 @@ body {
   font-weight: 500;
 }
 .paginas li a:hover {
-  color: var(--cor-secundario); /* cor padrão do texto (preto) */
-  text-decoration: none; /* sem sublinhado por padrão */
-  transition: color 0.3s ease; /* transição suave para a cor */
+  color: var(--cor-secundario); 
+  text-decoration: none; 
+  transition: color 0.3s ease;
 }
 
 .paginas a {
@@ -190,4 +190,12 @@ body {
   height: 357.064px;
   padding: 0 34px 0 74px;
   flex-shrink: 0;
+}
+.divisoria-1{
+  width: 1366px;
+  height: 1px;
+  border: 1px;
+  background-color: var(--cor-secundario);
+  box-shadow: 0px 4px 50px 0px var(--cor-secundario);
+  margin-top: 123px;
 }
