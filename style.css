@@ -144,7 +144,6 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Pseudo para borda com gradiente horizontal */
 .botao-linkedin::before,
 .botao-github::before {
   content: "";
@@ -198,4 +197,23 @@ body {
   background-color: var(--cor-secundario);
   box-shadow: 0px 4px 50px 0px var(--cor-secundario);
   margin-top: 123px;
+}
+/* seção serviços*/
+.meus-servicos{
+  width: 1366px;
+  height: 805px;  
+}
+
+.titulo-servicos{
+  text-align: justify;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+  font-family: var(--font-principal);
+  font-size: 48px;
+  font-weight: 300px;
+  line-height: 36px;
+  letter-spacing: 3.36px;
+  background: linear-gradient(90deg, #6798DE 0%, #D838DB 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
