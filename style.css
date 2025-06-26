@@ -351,10 +351,16 @@ html, body {
   margin-left: -120px;        
 }
 .divisoria-2{
-  max-width: 1366px;
+  width: 100vw;
   height: 1px;
   border: 1px;
   background-color: var(--cor-secundario);
   box-shadow: 0px 4px 50px 0px var(--cor-secundario);
-  margin-top: 123px;
+}
+
+/* seção projetos */
+.meus-projetos {
+  max-width: 1366px;
+  padding: 60px 120px;
+  margin: 0 auto;
 }
