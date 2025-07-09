@@ -537,3 +537,21 @@ footer.rodape {
   height: 24px; 
   cursor: pointer;
 }
+
+/* Paginas de navegação*/
+/*Sobre mim */
+
+.conteudo-sobre {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 84px 0;
+}
+
+.conteudo-wrapper {
+  max-width: 1150px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  margin: 0 auto;
+  padding-top: 84px;
+}
