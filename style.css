@@ -193,7 +193,7 @@ body {
 }
 
 .divisoria-1{
-  max-width: 1366px;
+  width: 100%;
   height: 1px;
   border: 1px;
   background-color: var(--cor-secundario);
@@ -544,14 +544,158 @@ footer.rodape {
 .conteudo-sobre {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 84px 0;
+  padding: 48px 0;
 }
 
 .conteudo-wrapper {
   max-width: 1150px;
   width: 100%;
-  display: flex;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: start; 
   margin: 0 auto;
+}
+
+.conteudo-texto-sobre {
+  max-width: 744px;
+}
+
+.titulo-sobre {
+  font-family: var(--font-principal);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 87px;
+  letter-spacing: 1.08px;
+  background: var(--gradiente-principal);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100% auto;
+  background-position: center;
+  display: inline-block;
+  margin-top: 0;
+}
+
+.sobre-info {
+  color: var(--cor-texto-principal);
+  text-shadow: 0px 2px 4.8px rgba(0, 0, 0, 0.25);
+  font-family: Lexend;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+}
+
+.sobre-info p {
+  margin-bottom: 16px;
+}
+
+.sobre-info p:first-child {
+  margin-top: 0;
+}
+
+.imagem-sobre {
+  max-width: 300px;
+  height: auto;
   padding-top: 84px;
 }
+
+.conteudo-sobre {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.conteudo-wrapper {
+  max-width: 1150px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto; /* texto ocupa o máximo, imagem o tamanho natural */
+  gap: 16px;
+  align-items: start; /* alinha itens ao topo */
+  margin: 0 auto;
+}
+
+.conteudo-texto-sobre {
+  max-width: 744px;
+}
+
+.titulo-sobre {
+  font-family: var(--font-principal);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 87px;
+  letter-spacing: 1.08px;
+  background: var(--gradiente-principal);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100% auto;
+  background-position: center;
+  display: inline-block;
+  margin-top: 0;
+}
+
+.sobre-info {
+  color: var(--cor-texto-principal);
+  text-shadow: 0px 2px 4.8px rgba(0, 0, 0, 0.25);
+  font-family: Lexend;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+}
+
+.sobre-info p {
+  margin-bottom: 16px;
+}
+
+.sobre-info p:first-child {
+  margin-top: 0;
+}
+
+.imagem-sobre {
+  /* Ajuste a largura máxima da imagem conforme preferir */
+  max-width: 300px;
+  height: auto;
+}
+
+.perfil-sobre {
+  max-width: 100%;
+  max-height: 305px;
+  object-fit: cover;
+  border-radius: 8px; /* opcional */
+  display: block;
+  margin: 0;
+}
+
+/* Projetos */
+
+.meus-projetos-nav{
+  padding-bottom: 20px; 
+}
+.titulo-projetos-nav h1{
+  font-family: var(--font-principal);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 87px;
+  letter-spacing: 1.08px;
+  background: var(--gradiente-principal);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100% auto;
+  background-position: center;
+  display: inline-block;
+  margin-top: 0;
+  padding-top: 48px;
+  padding-left: 120px;
+}
+
