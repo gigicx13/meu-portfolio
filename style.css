@@ -357,8 +357,15 @@ html, body {
 }
 
 .grupo-icones {
-  width: 100%;
-  margin-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  margin-top: 87px;
+
+  width: calc(100% + 120px);  /* compensa o padding-left da seção */
+  margin-left: -120px;        /* anula o recuo causado pelo padding da seção */
+  flex-wrap: wrap;            /* opcional: evita quebra feia em telas menores */
 }
 .divisoria-2{
   width: 100%;
@@ -676,26 +683,43 @@ footer.rodape {
 
 /* Projetos */
 
-.meus-projetos-nav{
-  padding-bottom: 20px; 
+.pagina.meus-projetos {
+  padding-bottom: 20px;
+  padding-left: 0;
+  margin-left: 0;
 }
-.titulo-projetos-nav h1{
+
+.pagina.meus-projetos .titulo-projetos h1 {
   font-family: var(--font-principal);
   font-size: 36px;
-  font-style: normal;
   font-weight: 500;
   line-height: 87px;
   letter-spacing: 1.08px;
+
   background: var(--gradiente-principal);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+
+  display: inline-block;
   background-size: 100% auto;
   background-position: center;
-  display: inline-block;
-  margin-top: 0;
-  padding-top: 48px;
-  padding-left: 120px;
+
+  margin: 0;         
+  padding-left: 100px;        
+  position: relative;
+  
 }
+.pagina.meus-projetos .container-cards {
+  display: flex;
+  gap: 60px;
+  justify-content: flex-start;
+  padding-left: 100px;
+  align-items: flex-start;
+  margin-top: 0;
+  padding-top: 16px;
+}
+
+
 
