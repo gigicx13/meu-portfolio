@@ -363,9 +363,9 @@ html, body {
   gap: 42px;
   margin-top: 87px;
 
-  width: calc(100% + 120px);  /* compensa o padding-left da seção */
-  margin-left: -120px;        /* anula o recuo causado pelo padding da seção */
-  flex-wrap: wrap;            /* opcional: evita quebra feia em telas menores */
+  width: calc(100% + 120px); 
+  margin-left: -120px;        
+  flex-wrap: wrap;            
 }
 .divisoria-2{
   width: 100%;
@@ -681,7 +681,7 @@ footer.rodape {
   margin: 0;
 }
 
-/* Projetos */
+/* Pagina de Projetos */
 
 .pagina.meus-projetos {
   padding-bottom: 20px;
@@ -721,5 +721,33 @@ footer.rodape {
   padding-top: 16px;
 }
 
+/* Pagina de Contato */ 
 
+.pagina-contato{
+  padding-bottom: 20px;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.titulo-contato {
+  font-family: var(--font-principal);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 87px;
+  letter-spacing: 1.08px;
+
+  background: var(--gradiente-principal);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  display: inline-block;
+  background-size: 100% auto;
+  background-position: center;
+
+  margin: 0;         
+  padding-left: 100px;        
+  position: relative;
+}
 
