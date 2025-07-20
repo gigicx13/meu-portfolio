@@ -31,6 +31,7 @@ body {
 
 .menu-box {
   width: 1151px;
+  margin: 0 auto;   
   border: 1px solid #6798DE;
   border-radius: 22px;
   box-shadow: 0px 3px 8.7px 0px #6798DE;
@@ -77,14 +78,13 @@ body {
 }
 
 .container-flex {
+  width: 1151px; 
+  margin: 0 auto;  
+  padding: 130px 0 0 0;  
   display: flex;
   align-items: center;
   gap: 140px;
-  width: 1127px;
-  height: 411px;
-  max-width: 100%;
-  padding-left: 120px;
-  padding-top: 130px;
+  box-sizing: border-box;
 }
 
 /* Conteudo */
@@ -203,13 +203,16 @@ body {
 
 /* seção 2 -serviços*/
 .meus-servicos{
-  max-width: 1366px;
-  height: 805px;  
-  max-width: 100%;
-  padding-left: 120px;
-  padding-top: 54px;
+  max-width: 1151px;  /* igual ao menu */
+  margin: 0 auto;     /* centralizado na página */
+  padding: 54px 32px 0 32px; /* espaçamento topo e laterais */
+  box-sizing: border-box;
 }
+
 .titulo-servicos {
+  max-width: 1151px;   
+  margin: 0 0 36px 0;       
+  padding: 0;    
   font-family: var(--font-titulo);
   font-size: 32px;
   font-weight: 300;
@@ -234,14 +237,9 @@ body {
 
 .container-servicos {
   width: 100%;
-  max-width: 1366px;
-  margin: 0 auto;
-  padding: 0; 
   display: flex;
   flex-direction: column;
   gap: 48px;
-  align-items: flex-start;
-  margin-top: 36px;
 }
 .box-frontend {
   align-self: flex-start;
@@ -301,11 +299,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-
  
   align-self: flex-start;
   margin-left: auto;
-  margin-right: 120px; 
+  margin-right: 100px; 
+
 }
 .icone-titulo {
   display: flex;
@@ -353,20 +351,11 @@ html, body {
   gap: 42px;
   margin-top: 87px;
   width: calc(100% + 120px); 
-  margin-left: -120px;        
+  margin-left: -120px;  
+  flex-wrap: wrap; 
+  margin-bottom: 48px;
 }
 
-.grupo-icones {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 42px;
-  margin-top: 87px;
-
-  width: calc(100% + 120px); 
-  margin-left: -120px;        
-  flex-wrap: wrap;            
-}
 .divisoria-2{
   width: 100%;
   height: 1px;
@@ -651,7 +640,7 @@ footer.rodape {
 .sobre-info {
   color: var(--cor-texto-principal);
   text-shadow: 0px 2px 4.8px rgba(0, 0, 0, 0.25);
-  font-family: Lexend;
+  font-family: var(--font-principal);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -667,7 +656,6 @@ footer.rodape {
 }
 
 .imagem-sobre {
-  /* Ajuste a largura máxima da imagem conforme preferir */
   max-width: 300px;
   height: auto;
 }
@@ -676,59 +664,24 @@ footer.rodape {
   max-width: 100%;
   max-height: 305px;
   object-fit: cover;
-  border-radius: 8px; /* opcional */
+  border-radius: 8px;
   display: block;
   margin: 0;
 }
 
-/* Pagina de Projetos */
+/* Página de Contato */
 
-.pagina.meus-projetos {
-  padding-bottom: 20px;
-  padding-left: 0;
-  margin-left: 0;
+.pagina-contato {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 48px 0;
 }
-
-.pagina.meus-projetos .titulo-projetos h1 {
-  font-family: var(--font-principal);
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 87px;
-  letter-spacing: 1.08px;
-
-  background: var(--gradiente-principal);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-
-  display: inline-block;
-  background-size: 100% auto;
-  background-position: center;
-
-  margin: 0;         
-  padding-left: 100px;        
-  position: relative;
-  
-}
-.pagina.meus-projetos .container-cards {
-  display: flex;
-  gap: 60px;
-  justify-content: flex-start;
+.conteudo-contato{
   padding-left: 100px;
-  align-items: flex-start;
-  margin-top: 0;
-  padding-top: 16px;
+  max-width: 557px;
+  height: 267px;  
+
 }
-
-/* Pagina de Contato */ 
-
-.pagina-contato{
-  padding-bottom: 20px;
-  padding-left: 0;
-  margin-left: 0;
-}
-
 .titulo-contato {
   font-family: var(--font-principal);
   font-size: 36px;
@@ -742,12 +695,20 @@ footer.rodape {
   -webkit-text-fill-color: transparent;
   color: transparent;
 
+  margin: 0;
+  padding: 0;
   display: inline-block;
-  background-size: 100% auto;
-  background-position: center;
-
-  margin: 0;         
-  padding-left: 100px;        
-  position: relative;
 }
 
+.info-contato {
+  color: var(--cor-texto-principal);
+  font-family: var(--font-principal);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: 0.6px;
+
+  margin: 0;
+  padding: 0;
+}
