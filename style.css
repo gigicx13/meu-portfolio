@@ -509,7 +509,7 @@ footer.rodape {
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  padding: 20px 120px;
+  padding: 20px 100px;
 }
 
 .rodape p {
@@ -713,3 +713,6 @@ footer.rodape {
   margin: 0;
   padding: 0;
 }
+
+/*Seção formulário*/ 
+
