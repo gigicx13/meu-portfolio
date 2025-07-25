@@ -675,12 +675,17 @@ footer.rodape {
 .pagina-contato {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 48px 0;
+  padding: 48px 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 100px;
+  flex-wrap: wrap;
 }
 .conteudo-contato{
-  padding-left: 100px;
   max-width: 557px;
-  height: 267px;  
+  height: 267px;
+  flex: 1 1 40%; 
 
 }
 .titulo-contato {
@@ -715,4 +720,106 @@ footer.rodape {
 }
 
 /*Seção formulário*/ 
+.formulario-contato {
+  flex: 1 1 50%;
+  max-width: 600px;
+  padding-top: 48px;
+  font-family: var(--font-principal);
+}
 
+.name-group, .message-group, .email-group {
+  display: flex;              
+  flex-direction: column;     
+  gap: 16px;                   
+  margin-bottom: 16px;        
+}
+
+.formulario-contato label {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 6px;
+  display: block;
+  color: var(--cor-texto-principal);
+  letter-spacing: 0.6px;
+  font-style: normal;
+}
+
+input.form-control, textarea.form-control {
+  background-color: transparent;  
+  border: 2px solid var(--cor-secundario) ; 
+  border-radius: 12px;             
+  color: var(--cor-texto-principal);                  
+  font-family: 'Lexend', sans-serif; 
+  font-size: 12px; 
+  font-weight: 500;                
+  padding: 10px 15px;             
+  outline: none;                   
+  transition: border-color 0.3s ease;  
+}
+
+input.form-control::placeholder, textarea.form-control::placeholder {
+  color: #AAAAAA;                  
+  font-style: italic;
+}
+
+/* Quando o campo estiver focado (clicado) */
+input.form-control:focus, textarea.form-control:focus {
+           
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.botao-input {
+  position: relative;
+  display: block;
+  margin: 20px auto 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  width: 130px;
+  height: 40px;
+
+  font-family: var(--font-principal);
+  font-size: 16px;
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 12px;
+
+  background-color: #111723; 
+  border: none;
+
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.3s ease;
+}
+
+.botao-input::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 12px;
+  padding: 2px; 
+  background: linear-gradient(45deg, #EE2E90, #2D93D3);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+.botao-input:hover::after {
+  content: "";
+  position: absolute;
+  top: 2px; left: 2px; right: 2px; bottom: 2px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(238, 46, 144, 0.4), rgba(45, 147, 211, 0.4));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  pointer-events: none;
+  z-index: -1;
+}
