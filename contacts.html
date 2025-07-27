@@ -50,12 +50,12 @@
                 <div class="conteudo-texto-contato">
                     <h1 class="titulo-contato">Fale Comigo!</h1>
                     <div class="info-contato">
-                        <p>Gostou do meu trabalho ou quer transformar sua ideia em realidade?</p>
+                        <p>Gostou do meu trabalho, tem alguma sugestão de melhoria ou quer transformar sua ideia em realidade?</p>
                         <p>Entre em contato comigo e vamos conversar sobre sua ideia ou projeto!</p>
                     </div>
                 </div>
             </div>
-            <form class="formulario-contato">
+            <form class="formulario-contato" id="contato-form">
               <div class="name-group">
                 <label for="CampoNome">Nome</label>
                 <input type="text" class="form-control" id="CampoNome" placeholder="Digite o seu nome">
@@ -74,7 +74,32 @@
               <!-- Botão de envio -->
               <button class="botao-input" type="submit" class="btn btn-primary">Enviar</button>
             </form>
-
+            <script>
+              const form = document.getElementById("contato-form");
+            
+              form.addEventListener("submit", function (e) {
+                e.preventDefault();
+            
+                const dados = {
+                  nome: document.getElementById("CampoNome").value,
+                  email: document.getElementById("CampoEmail").value,
+                  mensagem: document.getElementById("CampoMensagem").value,
+                };
+            
+                fetch("https://script.google.com/macros/s/AKfycbzrJHJDcTtgg8kgyCBELgyywhws-AmNytEP2-fgcog4vgK1M3xsRGawzzTBU8MJuXau/exec", {
+                  method: "POST",
+                  body: JSON.stringify(dados),
+                })
+                .then((res) => {
+                  alert("Mensagem enviada com sucesso!");
+                  form.reset();
+                })
+                .catch((err) => {
+                  alert("Erro ao enviar. Tente novamente.");
+                  console.error(err);
+                });
+              });
+            </script>
           </section>
 
         <div class="divisoria-3"></div>
