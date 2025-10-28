@@ -841,3 +841,207 @@ input.form-control:focus, textarea.form-control:focus {
   pointer-events: none;
   z-index: -1;
 }
+
+/* ======================================= */
+/* MEDIA QUERY: Tablet (max-width: 1024px) */
+/* ======================================= */
+
+@media (max-width: 1024px) {
+  /* * Configurações Gerais de Container
+   * Reduz o tamanho máximo e adiciona padding para telas menores.
+   */
+  .menu-box, 
+  .container-flex, 
+  .meus-servicos, 
+  .meus-projetos,
+  .conteudo-wrapper {
+      width: 90%; /* Largura fluida para a maioria dos elementos */
+      max-width: 950px; /* Limite máximo para evitar largura excessiva */
+  }
+
+  /* * Cabeçalho (Header)
+   * Ajusta o menu de navegação.
+   */
+  .nav-container {
+      padding: 0 20px;
+  }
+
+  .paginas {
+      gap: 24px; /* Reduz o espaçamento entre os links */
+      font-size: 18px; /* Diminui um pouco o tamanho da fonte */
+  }
+
+  /* * Seção 1 - Apresentação (Hero)
+   * Empilha a imagem e o texto e ajusta o tamanho da fonte.
+   */
+  .container-flex {
+      flex-direction: column; /* Empilha os elementos: texto e imagem */
+      padding-top: 60px;
+      gap: 40px;
+      text-align: center; /* Centraliza o texto */
+  }
+
+  .titulo {
+      font-size: 64px; /* Reduz o tamanho do título principal */
+      line-height: 70px;
+      letter-spacing: 10px;
+      padding-bottom: 20px;
+  }
+
+  .apresentacao {
+      width: 100%; /* Ocupa a largura total dentro do container-flex */
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center; /* Centraliza o texto */
+  }
+
+  .botoes {
+      justify-content: center; /* Centraliza os botões */
+  }
+
+  .imagem {
+      width: 300px;
+      height: auto;
+      padding: 0;
+  }
+
+  /* * Seção 2 - Serviços (Cards)
+   * Centraliza os cards e ajusta sua largura e margem.
+   */
+  .titulo-servicos {
+      margin-bottom: 30px;
+  }
+
+  .container-servicos {
+      align-items: center; /* Centraliza os cards */
+      gap: 32px;
+  }
+
+  .box-frontend, 
+  .box-ux {
+      width: 100%; /* Ocupa a largura total do container (90%) */
+      max-width: 650px; /* Limita a largura máxima do card */
+      margin-left: 0; /* Remove a margem 'auto' do box-ux */
+      margin-right: 0; 
+      padding: 30px;
+      align-self: center; /* Garante o alinhamento central */
+  }
+
+  .box-frontend h3,
+  .box-ux h3 {
+      font-size: 24px;
+  }
+  
+  .box-frontend p,
+  .box-ux p {
+      font-size: 18px;
+      line-height: 32px;
+  }
+
+  .grupo-icones {
+      width: 100%;
+      margin-left: 0; /* Remove o ajuste de margem negativa */
+      gap: 32px; /* Reduz o espaço entre os ícones */
+      justify-content: space-around; /* Distribui os ícones */
+  }
+
+  /* * Seção 3 - Projetos (Cards)
+   * Empilha os cards de projeto.
+   */
+  .container-cards {
+      flex-direction: column; /* Empilha os cards */
+      gap: 24px;
+      padding-top: 40px;
+  }
+  
+  .card-projeto {
+      width: 90%; /* Torna o card mais fluido */
+      max-width: 450px; /* Limita o tamanho do card */
+      height: auto; /* Altura flexível */
+  }
+
+  /* * Rodapé (Footer)
+   * Ajusta o padding e o texto.
+   */
+  footer.rodape {
+      padding: 20px 50px;
+  }
+
+  .rodape p {
+      /* Mantém a centralização, mas reduz o tamanho da fonte */
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 1px;
+  }
+  
+  .icones-rodape {
+      gap: 15px;
+  }
+
+  /* * Páginas Secundárias: Sobre Mim (AJUSTE SOLICITADO)
+   * Muda para duas colunas com a IMAGEM À DIREITA.
+   */
+  .conteudo-sobre {
+      padding: 48px 0;
+  }
+  
+  .conteudo-wrapper {
+      grid-template-columns: 1fr auto; /* Duas colunas: texto à esquerda, imagem à direita */
+      gap: 40px; /* Aumenta um pouco o gap para separar melhor */
+      justify-items: stretch; /* Garante que o conteúdo ocupe o espaço */
+      max-width: 800px; /* Reduz o max-width geral da seção */
+  }
+
+  .conteudo-texto-sobre {
+      max-width: 100%;
+      /* Garante que o texto fique à esquerda (posição padrão do grid) */
+  }
+  
+  .imagem-sobre {
+      padding-top: 0; /* Remove o padding extra */
+      text-align: right; /* Alinha a div da imagem à direita */
+      justify-self: end; /* Empurra para a direita na grade */
+  }
+
+  .perfil-sobre {
+      max-width: 280px; /* Mantém um bom tamanho para tablet */
+  }
+
+  .titulo-sobre {
+      font-size: 32px;
+      line-height: 60px;
+  }
+
+  /* * Páginas Secundárias: Contato
+   * Empilha o formulário e o texto de contato.
+   */
+  .pagina-contato {
+      padding: 48px 5%; /* Reduz o padding lateral */
+      flex-direction: column; /* Empilha os elementos */
+      gap: 40px;
+      align-items: center;
+  }
+
+  .conteudo-contato,
+  .formulario-contato {
+      flex: none; /* Remove a flexibilidade */
+      width: 100%;
+      max-width: 600px; /* Limite máximo para o formulário e texto */
+      padding-top: 0; /* Remove o padding extra */
+      text-align: center; /* Centraliza o texto de contato */
+  }
+  
+  .titulo-contato {
+      font-size: 32px;
+      line-height: 60px;
+  }
+
+  .info-contato {
+      font-size: 16px;
+      line-height: 36px;
+  }
+  
+  .formulario-contato label {
+      text-align: left; /* Garante que os labels no formulário permaneçam alinhados à esquerda */
+  }
+}
