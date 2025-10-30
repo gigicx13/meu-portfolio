@@ -842,206 +842,201 @@ input.form-control:focus, textarea.form-control:focus {
   z-index: -1;
 }
 
-/* ======================================= */
-/* MEDIA QUERY: Tablet (max-width: 1024px) */
-/* ======================================= */
+/* ================================
+   RESPONSIVIDADE - TABLET (768px–1024px)
+   Versão revisada — corrige imagem, margens e cards
+================================= */
+@media (min-width: 768px) and (max-width: 1024px) {
 
-@media (max-width: 1024px) {
-  /* * Configurações Gerais de Container
-   * Reduz o tamanho máximo e adiciona padding para telas menores.
-   */
-  .menu-box, 
-  .container-flex, 
-  .meus-servicos, 
-  .meus-projetos,
-  .conteudo-wrapper {
-      width: 90%; /* Largura fluida para a maioria dos elementos */
-      max-width: 950px; /* Limite máximo para evitar largura excessiva */
+  /* Layout geral — evitar overflow e centralizar */
+  :root, body {
+    overflow-x: hidden;
   }
 
-  /* * Cabeçalho (Header)
-   * Ajusta o menu de navegação.
-   */
-  .nav-container {
-      padding: 0 20px;
+  .menu-box {
+    width: calc(100% - 48px);
+    max-width: 890px;
   }
 
-  .paginas {
-      gap: 24px; /* Reduz o espaçamento entre os links */
-      font-size: 18px; /* Diminui um pouco o tamanho da fonte */
-  }
-
-  /* * Seção 1 - Apresentação (Hero)
-   * Empilha a imagem e o texto e ajusta o tamanho da fonte.
-   */
+  /* Container principal — empilha conteúdo em coluna */
   .container-flex {
-      flex-direction: column; /* Empilha os elementos: texto e imagem */
-      padding-top: 60px;
-      gap: 40px;
-      text-align: center; /* Centraliza o texto */
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+    align-items: center;
+    width: calc(100% - 48px);
+    max-width: 980px;
+    margin: 0 auto;
+    padding-top: 60px;
+    gap: 40px;
+    box-sizing: border-box;
   }
 
+  /* Força a imagem a aparecer antes (acima) do título/texto */
+  .imagem {
+    order: -1;           /* garante que a imagem venha primeiro */
+    width: 300px;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+
+  /* Título e apresentação — centralizados e com largura controlada */
   .titulo {
-      font-size: 64px; /* Reduz o tamanho do título principal */
-      line-height: 70px;
-      letter-spacing: 10px;
-      padding-bottom: 20px;
+    order: 0;
+    font-size: 72px;
+    line-height: 60px;
+    letter-spacing: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 820px;
+    box-sizing: border-box;
   }
 
   .apresentacao {
-      width: 100%; /* Ocupa a largura total dentro do container-flex */
-      font-size: 18px;
-      line-height: 30px;
-      text-align: center; /* Centraliza o texto */
+    order: 1;
+    width: 100%;
+    max-width: 760px;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 16px;
+    box-sizing: border-box;
   }
 
   .botoes {
-      justify-content: center; /* Centraliza os botões */
+    justify-content: center;
+    gap: 20px;
+    order: 2;
+    padding-top: 16px;
   }
 
-  .imagem {
-      width: 300px;
-      height: auto;
-      padding: 0;
-  }
-
-  /* * Seção 2 - Serviços (Cards)
-   * Centraliza os cards e ajusta sua largura e margem.
-   */
-  .titulo-servicos {
-      margin-bottom: 30px;
+  /* Serviços — alinhamento e largura */
+  .meus-servicos {
+    width: calc(100% - 48px);
+    max-width: 980px;
+    margin: 0 auto;
+    padding-top: 40px;
+    box-sizing: border-box;
   }
 
   .container-servicos {
-      align-items: center; /* Centraliza os cards */
-      gap: 32px;
+    gap: 32px;
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
   }
 
-  .box-frontend, 
+  .box-frontend,
   .box-ux {
-      width: 100%; /* Ocupa a largura total do container (90%) */
-      max-width: 650px; /* Limita a largura máxima do card */
-      margin-left: 0; /* Remove a margem 'auto' do box-ux */
-      margin-right: 0; 
-      padding: 30px;
-      align-self: center; /* Garante o alinhamento central */
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
-  .box-frontend h3,
-  .box-ux h3 {
-      font-size: 24px;
-  }
-  
-  .box-frontend p,
-  .box-ux p {
-      font-size: 18px;
-      line-height: 32px;
+  .box-ux {
+    margin-left: 0;
+    margin-right: 0;
   }
 
+  /* Evitar comportamentos estranhos do grupo de ícones (overflow causado por calc) */
   .grupo-icones {
-      width: 100%;
-      margin-left: 0; /* Remove o ajuste de margem negativa */
-      gap: 32px; /* Reduz o espaço entre os ícones */
-      justify-content: space-around; /* Distribui os ícones */
+    width: 100%;
+    margin-left: 0;
+    margin-top: 48px;
+    justify-content: center;
+    padding: 0 12px;
+    box-sizing: border-box;
   }
 
-  /* * Seção 3 - Projetos (Cards)
-   * Empilha os cards de projeto.
-   */
+  /* Projetos — empilhar e ajustar borda gradient corretamente */
+  .meus-projetos {
+    width: calc(100% - 48px);
+    max-width: 980px;
+    margin: 0 auto;
+    padding-top: 40px;
+    box-sizing: border-box;
+  }
+
   .container-cards {
-      flex-direction: column; /* Empilha os cards */
-      gap: 24px;
-      padding-top: 40px;
-  }
-  
-  .card-projeto {
-      width: 90%; /* Torna o card mais fluido */
-      max-width: 450px; /* Limita o tamanho do card */
-      height: auto; /* Altura flexível */
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    align-items: center;
   }
 
-  /* * Rodapé (Footer)
-   * Ajusta o padding e o texto.
-   */
+  /* Wrapper da borda gradient: overflow-hidden para conter a barra */
+  .card-borda-gradiente {
+    width: 100%;
+    max-width: 720px;
+    padding: 2px; 
+    border-radius: 24px; 
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden; /* evita que a cor “vaze” para fora */
+    background: linear-gradient(90deg, #6798DE 0%, #D838DB 100%);
+    margin: 0 auto;
+  }
+
+  .card-projeto {
+    background: #131B2A;
+    border-radius: 22px; 
+    padding: 20px;
+    width: 100%;
+    height: auto; /* permite conteúdo variável */
+    text-align: justify;
+    color: var(--cor-texto-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* garante que nada vaze do card */
+  }
+
+  .card-projeto img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .card-projeto h3 {
+    font-size: 18px;
+    margin: 8px 0;
+  }
+
+  .card-projeto p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .botao-projeto {
+    width: 120px;
+    height: 36px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  /* Rodapé: empilha e centraliza */
   footer.rodape {
-      padding: 20px 50px;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 12px;
+    align-items: center;
   }
 
   .rodape p {
-      /* Mantém a centralização, mas reduz o tamanho da fonte */
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: 1px;
+    position: static;
+    transform: none;
+    font-size: 14px;
   }
-  
+
   .icones-rodape {
-      gap: 15px;
-  }
-
-  /* * Páginas Secundárias: Sobre Mim (AJUSTE SOLICITADO)
-   * Muda para duas colunas com a IMAGEM À DIREITA.
-   */
-  .conteudo-sobre {
-      padding: 48px 0;
-  }
-  
-  .conteudo-wrapper {
-      grid-template-columns: 1fr auto; /* Duas colunas: texto à esquerda, imagem à direita */
-      gap: 40px; /* Aumenta um pouco o gap para separar melhor */
-      justify-items: stretch; /* Garante que o conteúdo ocupe o espaço */
-      max-width: 800px; /* Reduz o max-width geral da seção */
-  }
-
-  .conteudo-texto-sobre {
-      max-width: 100%;
-      /* Garante que o texto fique à esquerda (posição padrão do grid) */
-  }
-  
-  .imagem-sobre {
-      padding-top: 0; /* Remove o padding extra */
-      text-align: right; /* Alinha a div da imagem à direita */
-      justify-self: end; /* Empurra para a direita na grade */
-  }
-
-  .perfil-sobre {
-      max-width: 280px; /* Mantém um bom tamanho para tablet */
-  }
-
-  .titulo-sobre {
-      font-size: 32px;
-      line-height: 60px;
-  }
-
-  /* * Páginas Secundárias: Contato
-   * Empilha o formulário e o texto de contato.
-   */
-  .pagina-contato {
-      padding: 48px 5%; /* Reduz o padding lateral */
-      flex-direction: column; /* Empilha os elementos */
-      gap: 40px;
-      align-items: center;
-  }
-
-  .conteudo-contato,
-  .formulario-contato {
-      flex: none; /* Remove a flexibilidade */
-      width: 100%;
-      max-width: 600px; /* Limite máximo para o formulário e texto */
-      padding-top: 0; /* Remove o padding extra */
-      text-align: center; /* Centraliza o texto de contato */
-  }
-  
-  .titulo-contato {
-      font-size: 32px;
-      line-height: 60px;
-  }
-
-  .info-contato {
-      font-size: 16px;
-      line-height: 36px;
-  }
-  
-  .formulario-contato label {
-      text-align: left; /* Garante que os labels no formulário permaneçam alinhados à esquerda */
+    justify-content: center;
   }
 }
