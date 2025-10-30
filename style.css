@@ -861,31 +861,33 @@ input.form-control:focus, textarea.form-control:focus {
   /* Container principal — empilha conteúdo em coluna */
   .container-flex {
     display: flex;
-    flex-direction: column; /* empilha verticalmente */
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start; /* volta o conteúdo para o topo */
     width: calc(100% - 48px);
     max-width: 980px;
     margin: 0 auto;
-    padding-top: 60px;
+    padding: 80px 0 60px; /* adiciona respiro extra no topo */
     gap: 40px;
+    min-height: 100vh;
     box-sizing: border-box;
+    text-align: center;
   }
-
-  /* Força a imagem a aparecer antes (acima) do título/texto */
+  
   .imagem {
-    order: -1;           /* garante que a imagem venha primeiro */
-    width: 300px;
+    order: -1;
+    width: 280px;
     height: auto;
-    padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 20px;
+    padding: 0; /* afasta a imagem do título */
     flex-shrink: 0;
     box-sizing: border-box;
   }
-
+  
   /* Título e apresentação — centralizados e com largura controlada */
   .titulo {
     order: 0;
-    font-size: 72px;
+    font-size: 76px;
     line-height: 60px;
     letter-spacing: 8px;
     text-align: center;
